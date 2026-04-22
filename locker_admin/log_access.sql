@@ -1,0 +1,1 @@
+SELECT * FROM access_logs;
