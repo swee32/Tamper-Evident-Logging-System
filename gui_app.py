@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
+import hashlib
 import main  # Your existing logging logic
 import config
 
@@ -54,7 +55,9 @@ class SmartLockerGUI:
             main.add_access_log("SUCCESSFUL_LOGIN", "Correct PIN entered via GUI.")
         else:
             messagebox.showerror("Access Denied", "Incorrect PIN!")
-            main.add_access_log("FAILED_ATTEMPT", f"GUI Login failed with PIN: {self.pin_display}")
+            key_fingerprint = hashlib.sha256(config.SECRET_KEY.encode()).hexdigest()[:16]
+            #print(f"🔑 Key Fingerprint: {}")
+            main.add_access_log("FAILED_ATTEMPT", f"GUI Login failed: {key_fingerprint}")
         
         self.pin_display = ""
         self.display.delete(0, tk.END)

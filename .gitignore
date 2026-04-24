@@ -1,0 +1,15 @@
+# Secrets
+.env
+secret.key
+
+# Python
+__pycache__/
+*.pyc
+
+# Database / backups
+*.enc
+*.xlsx
+backups/
+
+# OS
+.DS_Store

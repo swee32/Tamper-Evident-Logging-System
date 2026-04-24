@@ -1,12 +1,15 @@
-# config.py
+import os
+from dotenv import load_dotenv
 
-# Professional database configuration using limited user
+load_dotenv()
+
 DB_CONFIG = {
-    "host": "localhost",
-    "user": "locker_admin",        # Updated from 'root'
-    "password": "SecurePass123!",  # Updated to the new specific password
-    "database": "smart_lock_system"
+    "host": os.getenv("DB_HOST"),
+    "user": os.getenv("DB_USER"),
+    "password": os.getenv("DB_PASSWORD"),
+    "database": os.getenv("DB_NAME")
 }
 
-# The secret PIN for your digital door lock simulation
-SECRET_PIN = "1234"
+SECRET_PIN = os.getenv("SECRET_PIN")
+SECRET_KEY = os.getenv("SECRET_KEY")
+

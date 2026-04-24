@@ -41,5 +41,5 @@ def add_access_log(event_type, description):
 # --- SIMULATION ---
 if __name__ == "__main__":
     # Simulate a few events
-    add_access_log("SUCCESSFUL_LOGIN", "User: Admin entered correct PIN")
-    add_access_log("FAILED_ATTEMPT", "User: Unknown tried PIN 1234")
+    add_access_log("SUCCESSFUL_LOGIN", "Userdemo: Admin entered correct PIN")
+    add_access_log("FAILED_ATTEMPT", "Userdemo: Unknown tried PIN")

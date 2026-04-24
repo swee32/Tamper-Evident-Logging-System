@@ -36,8 +36,8 @@ def secure_admin_wipe():
         # Use root or main admin for this high-level task
         db = mysql.connector.connect(
             host="localhost",
-            user="root",
-            password="S322003y#", # Main Admin Credentials
+            user="",
+            password="", # Main Admin Credentials
             database="smart_lock_system"
         )
         cursor = db.cursor(dictionary=True)
